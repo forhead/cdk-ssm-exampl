@@ -104,7 +104,7 @@ export class SessionManagerEc2Stack extends cdk.Stack {
     });
     const ec2EFS = new ec2.Instance(this,'efsInstance',{
       vpc: sessionManagerVPC,
-      vpcSubnets: {subnetType:ec2.SubnetType.PUBLIC},
+      vpcSubnets: {subnetType:ec2.SubnetType.PRIVATE},
       machineImage : amznLinux,
       instanceType: new ec2.InstanceType('t2.micro'),
       securityGroup: sessionManagerEC2SG,
