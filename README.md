@@ -1,14 +1,29 @@
-# Welcome to your CDK TypeScript project!
+## 项目介绍
 
-This is a blank project for TypeScript development with CDK.
+本用例使用AWS的CDK创建一台EC2，EC2被赋予了使用session manager访问的权限，在环境生成之后，可以使用session manager进行运维操作。
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+### 执行代码
 
-## Useful commands
+1. 安装好CDK环境，并且下载代码后，执行以下指令
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+```
+npm run install @aws-cdk/aws-ec2, @aws-cdk/aws-iam
+```
+
+2. 编译代码
+
+```
+npm run build
+```
+
+3. 部署
+
+```
+cdk deploy
+```
+
+4. 删除环境
+
+```
+cdk destroy
+```
